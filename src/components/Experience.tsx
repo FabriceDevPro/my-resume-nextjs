@@ -97,4 +97,33 @@ const Experience: React.FC = () => {
           {
             title: "Support N1",
             details: [
-              "Assistance et Dépannage des utilisateurs du C.H.U de Toulouse à l’utilisation des applications propres à
+              "Assistance et Dépannage des utilisateurs du C.H.U de Toulouse à l’utilisation des applications propres à leurs travaux :",
+              "Accès aux applications",
+              "Outils de bureautique",
+              "Problèmes réseaux",
+              "Gestion des Files d’attente d’impression",
+            ]
+          },
+        ]}
+      />
+      <ExperienceItem 
+        role="Technicien support"
+        period="10/2008 - 05/2010"
+        company="Berger-Levrault"
+        location="Labège"
+        sections={[
+          {
+            title: "Support N1",
+            details: [
+              "Assistance et Dépannage des utilisateurs pour les logiciels de comptabilité publique, paye publique, gestion des administrés de la gamme wmagnus et emagnus pour les collectivités territoriales, les établissements du médico-social.",
+              "Sans prise en main à distance",
+              "Installation des logiciels à distance",
+            ]
+          },
+        ]}
+      />
+    </div>
+  );
+};
+
+export default Experience;
