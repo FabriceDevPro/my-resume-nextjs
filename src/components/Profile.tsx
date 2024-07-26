@@ -17,9 +17,9 @@ const Profile: React.FC = () => {
       <h2 className="text-sm font-medium mb-2">RÉSUMÉ</h2>
       <div className="border-t border-gray-300 w-full mb-4"></div>
       <p className="mb-2 text-xs text-left">
-        Développeur web spécialisé en React et PHP avec 3 ans d'expérience, je suis issu d'une
+        {`Développeur web spécialisé en React et PHP avec 3 ans d'expérience, je suis issu d'une
         solide expérience en informatique qui a orienté ma reconversion vers ma passion pour le
-        développement web.
+        développement web.`}
       </p>
       <p className="mb-2 text-xs text-left">
         Agile dans la résolution de problèmes et créatif.

@@ -43,7 +43,7 @@ const MyDocument = () => (
         <Text style={styles.text}>Développeur et Migrateur de données</Text>
         <Text style={styles.text}>SEPTEO ADB</Text>
         <Text style={styles.text}>11/2013 - 07/2023, Toulouse</Text>
-        <Text style={styles.text}>Création d'un questionnaire métier au format web en autodidacte pour remplacer la version papier en utilisant HTML/JS/CSS/PHP.</Text>
+        <Text style={styles.text}>{`Création d'un questionnaire métier au format web en autodidacte pour remplacer la version papier en utilisant HTML/JS/CSS/PHP.`}</Text>
       </View>
     </Page>
   </Document>
