@@ -6,7 +6,7 @@ import Projects from './Projects';
 
 const LeftColumn: React.FC = () => {
   return (
-    <div className="flex flex-col justify-between h-full p-6">
+    <div className="flex flex-col justify-between h-full p-6 bg-primary text-light">
       <div>
         <Profile />
         <Languages />

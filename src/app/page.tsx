@@ -1,5 +1,11 @@
+// src/app/page.tsx
+'use client';
+
+import Link from 'next/link';
 import LeftColumn from '../components/LeftColumn';
 import RightColumn from '../components/RightColumn';
+import ClientOnly from '../components/ClientOnly';
+import PDFDownload from '../components/PDFDownload';
 
 export default function Home() {
   return (
@@ -9,6 +15,11 @@ export default function Home() {
       </div>
       <div className="w-4/5 flex flex-col">
         <RightColumn />
+      </div>
+      <div className="fixed bottom-4 right-4">
+        <ClientOnly>
+          <PDFDownload />
+        </ClientOnly>
       </div>
     </div>
   );
