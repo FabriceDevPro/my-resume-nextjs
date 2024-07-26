@@ -25,8 +25,8 @@ const Profile: React.FC = () => {
         Agile dans la résolution de problèmes et créatif.
       </p>
       <p className="text-xs text-left">
-        Mon parcours est marqué par une évolution constante et une quête d'excellence
-        technologique.
+        {`Mon parcours est marqué par une évolution constante et une quête d'excellence
+        technologique.`}
       </p>
     </div>
   );
