@@ -6,11 +6,13 @@ import Projects from './Projects';
 
 const LeftColumn: React.FC = () => {
   return (
-    <div className="bg-primary h-full p-6 border border-primary text-light">
-      <Profile />
-      <Languages />
-      <Education />
-      <Projects />
+    <div className="flex flex-col justify-between h-full p-6">
+      <div>
+        <Profile />
+        <Languages />
+        <Education />
+        <Projects />
+      </div>
     </div>
   );
 };

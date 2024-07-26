@@ -5,7 +5,7 @@ import Diplomas from './Diplomas';
 
 const RightColumn: React.FC = () => {
   return (
-    <div className="h-full p-6">
+    <div className="flex-grow p-6">
       <Header />
       <Experience />
       <Diplomas />
