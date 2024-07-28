@@ -4,26 +4,26 @@
 
 :root {
   --primary-color: #22405C;
-  --secondary-color: #3B82F6; /* Blue color for text */
+  --secondary-color: #3B82F6;
   --border-color: #000000;
   --text-color-light: #FFFFFF;
 }
 
 /* Couleurs */
 .bg-primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 
 .border-primary {
-  border-color: var(--border-color);
+  border-color: var(--border-color) !important;
 }
 
 .text-light {
-  color: var(--text-color-light);
+  color: var(--text-color-light) !important;
 }
 
 .text-secondary {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 /* Bordures */
@@ -91,11 +91,11 @@
 }
 
 .text-2xl {
-  font-size: 1.5rem; /* Taille de police pour le titre réduit */
+  font-size: 1.5rem;
 }
 
 .text-xl {
-  font-size: 1.25rem; /* Taille de police pour le sous-titre réduite */
+  font-size: 1.25rem;
 }
 
 .font-bold {
@@ -108,12 +108,12 @@
 
 /* Dimensions de la page A4 */
 .print-container {
-  width: 210mm;  /* Largeur pour l'affichage et impression en mm */
-  height: 297mm; /* Hauteur pour correspondre au format A4 */
+  width: 210mm;
+  height: 297mm;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  margin: auto; /* Centrer la page */
+  margin: auto;
 }
 
 /* Réduction des marges internes */
@@ -123,29 +123,72 @@
 
 /* Réduction de l'espace entre l'en-tête et la section Expérience */
 .print-container .header {
-  margin-bottom: 0.5rem; /* Ajuster selon les besoins */
+  margin-bottom: 0.5rem;
 }
 
 .print-container .experience {
-  margin-top: 0.5rem; /* Ajuster selon les besoins */
+  margin-top: 0.5rem;
 }
 
 /* Configuration d'impression */
 @media print {
   @page {
     size: A4;
-    margin: 0; /* Supprime les marges pour l'impression */
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
   }
 
   .print-container {
-    width: 210mm; /* Largeur réelle pour l'impression */
-    height: 297mm; /* Hauteur réelle pour l'impression */
+    width: 210mm;
+    height: 297mm;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   .page-break {
     page-break-before: always;
+  }
+
+  /* Autres styles spécifiques à l'impression */
+  .bg-primary {
+    background-color: var(--primary-color) !important;
+  }
+
+  .border-primary {
+    border-color: var(--border-color) !important;
+  }
+
+  .text-light {
+    color: var(--text-color-light) !important;
+  }
+
+  .text-secondary {
+    color: var(--secondary-color) !important;
+  }
+
+  .rounded-full {
+    border-radius: 50% !important;
+  }
+
+  .border-t {
+    border-top-width: 1px !important;
+  }
+
+  .border-gray-300 {
+    border-color: #d1d5db !important;
+  }
+
+  .p-0 {
+    padding: 0 !important;
+  }
+
+  .m-0 {
+    margin: 0 !important;
   }
 }

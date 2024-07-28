@@ -1,7 +1,7 @@
 // src/components/PrintButton.tsx
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import PrintableComponent from './PrintableComponent';
+import MainComponent from './MainComponent';
 
 const PrintButton: React.FC = () => {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -13,10 +13,10 @@ const PrintButton: React.FC = () => {
   return (
     <div>
       <button onClick={handlePrint} className="bg-blue-500 text-white px-4 py-2 rounded shadow">
-        Print this out!
+        Print
       </button>
       <div style={{ display: 'none' }}>
-        <PrintableComponent ref={componentRef} />
+        <MainComponent ref={componentRef} isPDF={true} />
       </div>
     </div>
   );

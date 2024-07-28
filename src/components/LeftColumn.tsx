@@ -4,9 +4,13 @@ import Languages from './Languages';
 import Education from './Education';
 import Projects from './Projects';
 
-const LeftColumn: React.FC = () => {
+interface LeftColumnProps {
+  isPDF: boolean;
+}
+
+const LeftColumn: React.FC<LeftColumnProps> = ({ isPDF }) => {
   return (
-    <div className="flex flex-col justify-between h-full p-4 bg-primary text-light">
+    <div className={`flex flex-col justify-between h-full bg-primary text-light ${isPDF ? 'p-4' : ''}`}>
       <div>
         <Profile />
         <Languages />

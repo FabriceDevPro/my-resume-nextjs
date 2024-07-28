@@ -5,11 +5,15 @@ import Experience from './Experience';
 import Diplomas from './Diplomas';
 import OnlineProfiles from './OnlineProfiles';
 
-const RightColumn: React.FC = () => {
+interface RightColumnProps {
+  isPDF: boolean;
+}
+
+const RightColumn: React.FC<RightColumnProps> = ({ isPDF }) => {
   return (
-    <div className="flex-grow p-2"> {/* Réduire le padding général */}
+    <div className={`flex-grow ${isPDF ? 'p-2' : 'p-6'}`}>
       <Header />
-      <Experience />
+      <Experience isPDF={isPDF} />
       <Diplomas />
       <OnlineProfiles />
     </div>
