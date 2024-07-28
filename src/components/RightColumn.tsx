@@ -1,3 +1,4 @@
+// src/components/RightColumn.tsx
 import React from 'react';
 import Header from './Header';
 import Experience from './Experience';
@@ -6,7 +7,7 @@ import OnlineProfiles from './OnlineProfiles';
 
 const RightColumn: React.FC = () => {
   return (
-    <div className="flex-grow p-6">
+    <div className="flex-grow p-2"> {/* Réduire le padding général */}
       <Header />
       <Experience />
       <Diplomas />

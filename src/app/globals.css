@@ -9,6 +9,7 @@
   --text-color-light: #FFFFFF;
 }
 
+/* Couleurs */
 .bg-primary {
   background-color: var(--primary-color);
 }
@@ -25,13 +26,31 @@
   color: var(--secondary-color);
 }
 
+/* Bordures */
 .rounded-full {
   border-radius: 50%;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+/* Marges */
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
@@ -42,6 +61,19 @@
   margin-bottom: 2rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+/* Tailles de texte */
 .text-lg {
   font-size: 1.125rem;
 }
@@ -54,6 +86,18 @@
   font-size: 0.875rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* Taille de police pour le titre réduit */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* Taille de police pour le sous-titre réduite */
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -62,15 +106,46 @@
   text-align: center;
 }
 
-.border-t {
-  border-top-width: 1px;
+/* Dimensions de la page A4 */
+.print-container {
+  width: 210mm;  /* Largeur pour l'affichage et impression en mm */
+  height: 297mm; /* Hauteur pour correspondre au format A4 */
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: auto; /* Centrer la page */
 }
 
-.border-gray-300 {
-  border-color: #d1d5db;
+/* Réduction des marges internes */
+.print-container .p-2 {
+  padding: 0.5rem;
 }
 
-.w-32 {
-  width: 8rem;
-  height: 8rem;
+/* Réduction de l'espace entre l'en-tête et la section Expérience */
+.print-container .header {
+  margin-bottom: 0.5rem; /* Ajuster selon les besoins */
+}
+
+.print-container .experience {
+  margin-top: 0.5rem; /* Ajuster selon les besoins */
+}
+
+/* Configuration d'impression */
+@media print {
+  @page {
+    size: A4;
+    margin: 0; /* Supprime les marges pour l'impression */
+  }
+
+  .print-container {
+    width: 210mm; /* Largeur réelle pour l'impression */
+    height: 297mm; /* Hauteur réelle pour l'impression */
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
 }

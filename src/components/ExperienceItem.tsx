@@ -1,35 +1,46 @@
+// src/components/ExperienceItem.tsx
 import React from 'react';
 
-interface ExperienceItemProps {
+interface SectionDetail {
+  title: string;
+  items: string[];
+}
+
+interface ExperienceSection {
   role: string;
   period: string;
   company: string;
   location: string;
   sections: {
-    title: string;
-    details: string[];
+    subtitle: string;
+    details: SectionDetail[];
   }[];
 }
 
-const ExperienceItem: React.FC<ExperienceItemProps> = ({ role, period, company, location, sections }) => {
+const ExperienceItem: React.FC<ExperienceSection> = ({ role, period, company, location, sections }) => {
   return (
-    <div className="mb-6">
+    <div className="mb-4 p-2 border border-gray-300 rounded-lg shadow-sm bg-white text-xs"> {/* Réduire les paddings */}
       <div className="flex justify-between mb-1">
-        <h3 className="font-semibold">{role}</h3>
+        <h3 className="font-semibold text-sm">{role}</h3> {/* Réduire la taille de police */}
         <span>{period}</span>
       </div>
-      <div className="flex justify-between mb-2 text-secondary">
-        <span>{company}</span>
-        <span>{location}</span>
+      <div className="flex justify-between mb-2">
+        <span className="text-blue-500 text-xs">{company}</span> {/* Réduire la taille de police */}
+        <span className="text-black text-xs">{location}</span> {/* Réduire la taille de police */}
       </div>
       {sections.map((section, index) => (
         <div key={index} className="mb-2">
-          <h4 className="font-semibold italic">{section.title}</h4>
-          <ul className="list-disc list-inside ml-4">
-            {section.details.map((detail, index) => (
-              <li key={index}>{detail}</li>
-            ))}
-          </ul>
+          <h4 className="font-semibold italic underline mb-1 text-xs">{section.subtitle}</h4> {/* Réduire les marges */}
+          {section.details.map((detail, idx) => (
+            <div key={idx} className="mb-1"> {/* Réduire les marges */}
+              <h5 className="font-semibold text-xs">{detail.title}</h5> {/* Réduire la taille de police */}
+              <ul className="list-disc list-inside ml-2">
+                {detail.items.map((item, id) => (
+                  <li key={id}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       ))}
     </div>
