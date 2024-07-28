@@ -4,17 +4,27 @@
     {
       "name": "Corrigez vos bugs et trouvez une solution à vos problèmes de code",
       "organism": "OpenClassrooms",
-      "year": "2021"
+      "year": "2023"
     },
     {
-      "name": "Certification en développement Full-Stack",
-      "organism": "Coursera",
-      "year": "2020"
+      "name": "Gérez du code avec Git et GitHub",
+      "organism": "OpenClassrooms",
+      "year": "2023"
     },
     {
-      "name": "Certification en développement Full-Stack",
-      "organism": "Coursera",
-      "year": "2020"
+      "name": "Augmentez votre trafic grâce au référencement naturel (SEO)",
+      "organism": "OpenClassrooms",
+      "year": "2024"
+    },
+    {
+      "name": "Administrez vos bases de données avec MySQL",
+      "organism": "OpenClassrooms",
+      "year": "2024"
+    },
+    {
+      "name": "Voir les autres sur LinkedIn",
+      "organism": "",
+      "year": ""
     }
   ]
 }

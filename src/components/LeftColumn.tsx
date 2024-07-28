@@ -15,10 +15,10 @@ const LeftColumn: React.FC<LeftColumnProps> = ({ isPDF }) => {
     <div className={`flex flex-col justify-between h-full bg-primary text-light ${isPDF ? 'p-4 print-column' : 'print-column'}`}>
         <Profile />
         <Languages />
-        <Education />
-        <Certifications />
-        {isPDF && <div className="page-break"></div>}
+        <Education />        
         <Skills isPDF={isPDF} />
+        {isPDF && <div className="page-break"></div>}
+        <Certifications isPDF={isPDF} />
         <Projects isPDF={isPDF} />
     </div>
   );
