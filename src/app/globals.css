@@ -136,7 +136,9 @@
     size: A4;
     margin: 0;
   }
-
+  .full-height {
+    height: 100%;
+  }
   body {
     margin: 0;
   }
@@ -151,8 +153,15 @@
     padding: 0;
   }
 
-  .page-break-before {
+  .page-break {
     page-break-before: always;
+  }
+
+  .print-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
   }
 
   .bg-primary {

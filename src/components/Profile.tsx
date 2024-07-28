@@ -1,10 +1,10 @@
-// src/components/Profile.tsx
 import React from 'react';
 import Image from 'next/image';
 import profilePic from '../assets/profil.jpg';
 import profileData from '../data/profile.json';
 
 const Profile: React.FC = () => {
+
   return (
     <div className="mb-8 text-white">
       <div className="w-32 h-32 mx-auto mb-4 relative">
@@ -13,7 +13,7 @@ const Profile: React.FC = () => {
           alt="Photo" 
           className="rounded-[5%]"
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <h2 className="text-sm font-medium mb-2">RÉSUMÉ</h2>
