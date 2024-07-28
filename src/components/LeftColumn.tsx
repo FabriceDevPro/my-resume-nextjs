@@ -15,7 +15,7 @@ const LeftColumn: React.FC<LeftColumnProps> = ({ isPDF }) => {
         <Profile />
         <Languages />
         <Education />
-        <Projects />
+        <Projects isPDF={isPDF} />
       </div>
     </div>
   );

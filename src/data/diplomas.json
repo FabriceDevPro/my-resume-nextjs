@@ -1,0 +1,17 @@
+{
+    "title": "DIPLÔME",
+    "diplomas": [
+      {
+        "degree": "Intégrateur Web avec Mentions Très Bien",
+        "period": "09/2023 - 06/2024",
+        "institution": "OpenClassrooms",
+        "skills": "Compétences Obtenus : HTML, CSS, JS, React, API Rest, GIT, Visual Studio Code, Méthode Agile, Utilisation GitHub pour le Kanban"
+      },
+      {
+        "degree": "DUT GEA Option Finance et Comptabilité",
+        "period": "06/2008",
+        "institution": "Université de Perpignan - UPVD Alumni"
+      }
+    ]
+  }
+  

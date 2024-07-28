@@ -1,12 +1,14 @@
 import React from 'react';
+import educationData from '../data/education.json';
 
 const Education: React.FC = () => {
   return (
     <div className="mb-8 text-white">
-      <h2 className="text-sm font-medium mb-2">FORMATION / COURS</h2>
+      <h2 className="text-sm font-medium mb-2">{educationData.title}</h2>
       <div className="border-t border-gray-300 w-full mb-4"></div>
-      <p className="text-xs">SQL SERVER, Programmation SQL</p>
-      <p className="text-xs">VBA Excel 2013</p>
+      {educationData.courses.map((course, index) => (
+        <p key={index} className="text-xs">{course}</p>
+      ))}
     </div>
   );
 };

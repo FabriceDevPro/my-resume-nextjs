@@ -1,38 +1,33 @@
 import React from 'react';
+import projectsData from '../data/projects.json';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  isPDF: boolean;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ isPDF }) => {
   return (
     <div className="mb-8 text-white">
-      <h2 className="text-sm font-medium mb-2">PROJETS</h2>
+      <h2 className="text-sm font-medium mb-2">{projectsData.title}</h2>
       <div className="border-t border-gray-300 w-full mb-4"></div>
-      <div className="mb-4">
-        <h3 className="font-semibold text-sm mb-1">Gestion des Comptes Personnels (Format Web)</h3>
-        <p className="text-xs mb-1">07/2023 - Présent</p>
-        <p className="mb-2 text-xs leading-4">
-          {`En prévision de ma formation et pour pratiquer, j'ai choisi de transformer la version Excel
-          VBA en format Web. Cela permettra une plus grande flexibilité, de le rendre plus esthétique
-          et d'augmenter la capacité des utilisateurs.`}
-        </p>
-        <ul className="list-disc list-inside mb-2 text-xs leading-4">
-          <li>Utilisation de React et Redux pour le frontend</li>
-          <li>{`Création d'une API Sécurisée avec le Framework Laravel pour PHP`}</li>
-          <li>Hébergement du projet sur mon NAS Synology</li>
-          <li>Création de mon propre serveur de mail sur mon NAS</li>
-        </ul>
-      </div>
-      <div>
-        <h3 className="font-semibold text-sm mb-1">Gestion des Comptes Personnels (VBA Excel)</h3>
-        <p className="text-xs mb-1">01/2019 - Présent</p>
-        <p className="mb-2 text-xs leading-4">
-          {`Création d'un outil sous Excel VBA pour la gestion quotidienne de mes comptes bancaires, lié
-          à une base de données. Possibilité de l'utiliser à plusieurs et de gérer des comptes communs,
-          avec sauvegarde automatique.`}
-        </p>
-        <ul className="list-disc list-inside text-xs leading-4">
-          <li>Utilisation de VBA sous Excel</li>
-          <li>{`Utilisation d'une base de données sous Access`}</li>
-        </ul>
-      </div>
+      {projectsData.projects.map((project, index) => (
+        <React.Fragment key={index}>
+          {index === 1 && isPDF && <div className="page-break-before mb-4"></div>}
+          <div className={`mb-4`}>
+            <h3 className={`font-semibold mb-1 text-center ${isPDF ? 'text-[10px] leading-tight' : 'text-sm'}`}>{project.name}</h3>
+            {project.subname && (
+              <h3 className={`font-semibold mb-1 text-center ${isPDF ? 'text-[8px] leading-tight' : 'text-sm'}`}>{project.subname}</h3>
+            )}
+            <p className="text-xs my-2">{project.date}</p>
+            <p className="mb-2 text-xs leading-4 my-2">{project.description}</p>
+            <ul className="list-disc list-inside mb-2 text-xs leading-4">
+              {project.details.map((detail, idx) => (
+                <li key={idx}>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        </React.Fragment>
+      ))}
     </div>
   );
 };

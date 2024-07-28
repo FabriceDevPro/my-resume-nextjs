@@ -1,0 +1,28 @@
+{
+    "title": "PROJETS",
+    "projects": [
+      {
+        "name": "Gestion des Comptes Personnels",
+        "subname": "(Format Web)",
+        "date": "07/2023 - Présent",
+        "description": "En prévision de ma formation et pour pratiquer, j'ai choisi de transformer la version Excel VBA en format Web. Cela permettra une plus grande flexibilité, de le rendre plus esthétique et d'augmenter la capacité des utilisateurs.",
+        "details": [
+          "Utilisation de React et Redux pour le frontend",
+          "Création d'une API Sécurisée avec le Framework Laravel pour PHP",
+          "Hébergement du projet sur mon NAS Synology",
+          "Création de mon propre serveur de mail sur mon NAS"
+        ]
+      },
+      {
+        "name": "Gestion des Comptes Personnels",
+        "subname": "(VBA Excel)",
+        "date": "01/2019 - Présent",
+        "description": "Création d'un outil sous Excel VBA pour la gestion quotidienne de mes comptes bancaires, lié à une base de données. Possibilité de l'utiliser à plusieurs et de gérer des comptes communs, avec sauvegarde automatique.",
+        "details": [
+          "Utilisation de VBA sous Excel",
+          "Utilisation d'une base de données sous Access"
+        ]
+      }
+    ]
+  }
+  

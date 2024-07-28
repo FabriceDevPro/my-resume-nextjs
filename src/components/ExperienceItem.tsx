@@ -1,4 +1,3 @@
-// src/components/ExperienceItem.tsx
 import React from 'react';
 
 interface SectionDetail {
