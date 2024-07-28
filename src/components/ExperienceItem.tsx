@@ -23,9 +23,9 @@ const ExperienceItem: React.FC<ExperienceSection> = ({ role, period, company, lo
         <h3 className="font-semibold text-sm">{role}</h3> {/* Réduire la taille de police */}
         <span>{period}</span>
       </div>
-      <div className="flex justify-between mb-2">
-        <span className="text-blue-500 text-xs">{company}</span> {/* Réduire la taille de police */}
-        <span className="text-black text-xs">{location}</span> {/* Réduire la taille de police */}
+      <div className="flex justify-between mb-2 text-xs">
+        <span className="text-blue-500">{company}</span> {/* Réduire la taille de police */}
+        <span className="text-black">{location}</span> {/* Réduire la taille de police */}
       </div>
       {sections.map((section, index) => (
         <div key={index} className="mb-2">
