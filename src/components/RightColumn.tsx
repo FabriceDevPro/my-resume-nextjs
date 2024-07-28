@@ -9,8 +9,8 @@ interface RightColumnProps {
 }
 
 const RightColumn: React.FC<RightColumnProps> = ({ isPDF }) => {
-  const version = '1.0.0'; // Exemple de version
-  const lastUpdated = 'Juillet 2024'; // Exemple de date de mise à jour
+  const version = '1.0.0';
+  const lastUpdated = 'Juillet 2024';
 
   return (
     <div className={`flex-grow ${isPDF ? 'pt-2 pl-2 pr-2 pb-0' : 'p-6'}`}>
