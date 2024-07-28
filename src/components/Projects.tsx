@@ -13,7 +13,7 @@ const Projects: React.FC<ProjectsProps> = ({ isPDF }) => {
       <div className="flex-grow">
         {projectsData.projects.map((project, index) => (
           <div key={index} className="mb-4">
-            <h3 className={`font-semibold mb-1 text-center ${isPDF ? 'text-[10px] leading-tight' : 'text-sm'}`}>{project.name}</h3>
+            <h3 className={`font-semibold mb-1 text-center ${isPDF ? 'text-[12px] leading-tight' : 'text-sm'}`}>{project.name}</h3>
             {project.subname && (
               <h3 className={`font-semibold mb-1 text-center ${isPDF ? 'text-[10px] leading-tight' : 'text-sm'}`}>{project.subname}</h3>
             )}
