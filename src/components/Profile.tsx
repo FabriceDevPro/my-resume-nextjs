@@ -1,19 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../assets/profil.jpg';
 import profileData from '../data/profile.json';
 
 const Profile: React.FC = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <div className="mb-8 text-white">
       <div className="w-32 h-32 mx-auto mb-4 relative">
         <Image 
-          src={profilePic} 
+          src={`${basePath}/profil.jpg`} 
           alt="Photo" 
           className="rounded-[5%]"
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
       <h2 className="text-sm font-medium mb-2">RÉSUMÉ</h2>
