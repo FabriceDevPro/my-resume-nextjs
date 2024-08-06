@@ -11,9 +11,9 @@ const Profile: React.FC = () => {
         <Image 
           src={`${basePath}/profil.jpg`} 
           alt="Photo" 
-          className="rounded-[5%]"
-          layout="fill"
-          objectFit="cover"
+          className="rounded-[5%] object-cover" // Utilisez Tailwind pour le style
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw" // Ajustez les tailles selon vos besoins
         />
       </div>
       <h2 className="text-sm font-medium mb-2">RÉSUMÉ</h2>
